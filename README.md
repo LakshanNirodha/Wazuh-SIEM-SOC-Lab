@@ -65,7 +65,8 @@ Once installed, I started the agent service to begin the real-time monitoring:
 ### ✅ Step 4: Verification & Configuration
 I verified the agent appeared as **"Active"** on the dashboard (IP: 172.20.10.3). I then updated the `ossec.conf` file on the Windows host to enable real-time monitoring for the `C:\test` directory.
 
-<img width="1911" height="1003" alt="Active Agent" src="https://github.com/user-attachments/assets/14ec2e39-6880-4b75-8ca0-a022a9c19c6d" />
+<img width="1911" height="1003" alt="Screenshot 2026-03-25 130502" src="https://github.com/user-attachments/assets/9b35264a-8cbf-49c1-8065-54781cffec6c" />
+
 <img width="1911" height="1007" alt="Configuration Update" src="https://github.com/user-attachments/assets/e9d3600f-edcd-4e47-a924-4c2b179620ac" />
 
 ---
