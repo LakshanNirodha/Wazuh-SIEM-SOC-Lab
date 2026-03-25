@@ -1,7 +1,6 @@
 # 🛡️ Endpoint Security & Monitoring: Deploying Wazuh SIEM for Real-Time Threat Detection
 
 ## 📌 Project Overview
-## 📌 Project Overview
 In this hands-on cybersecurity lab, I deployed and configured **Wazuh**, an open-source Enterprise Security monitoring solution. The goal was to establish a centralized **Security Operations Center (SOC)** environment to monitor a Windows 11 endpoint in real-time. 
 
 This project demonstrates practical expertise in:
