@@ -10,21 +10,28 @@ This project demonstrates practical expertise in:
 ---
 
 ## 🛠️ Environment & Infrastructure Setup
-The lab was built using **Oracle VirtualBox** with a bridged networking configuration to allow seamless communication between the manager and the host.
+The lab was built using **Oracle VirtualBox** with a **Bridged Networking** configuration. This was a critical step to ensure seamless communication between the SIEM manager (VM) and the monitored endpoint (Host).
 
-* **SIEM Manager:** Ubuntu Server 22.04 (VirtualBox VM)
-* **Monitored Endpoint:** Windows 11 (Host Machine)
-* **Security Tools:** Wazuh Manager, Wazuh Agent, DQL (Dashboards Query Language)
+* **SIEM Manager:** Ubuntu Server 22.04 (Running as a VirtualBox VM)
+* **Monitored Endpoint:** Windows 11 (Physical Host Machine)
+* **Network Mode:** Bridged Adapter (Allows both machines to be on the same subnet)
+* **Security Stack:** Wazuh Manager (Server-side), Wazuh Agent (Endpoint-side), DQL (Dashboards Query Language for data analysis)
 
 ---
 
-## ⚙️ Phase 1: Wazuh Manager Deployment (Ubuntu)
-I initiated the Wazuh manager installation on a dedicated Ubuntu server.
+## ⚙️ Phase 1: Wazuh Manager Deployment (Ubuntu Server)
+I initiated the Wazuh manager installation on a dedicated Ubuntu server. The installation followed a structured process to ensure security and integrity.
 
-* **GPG Key Integration:** Added the official Wazuh GPG key to ensure package authenticity.
-* **Automated Installation:** Executed the all-in-one installation script to deploy the indexer, server, and dashboard components:
-  `curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh && sudo bash ./wazuh-install.sh -a -i`
-* **Network Validation:** Identified the manager’s IP (**172.20.10.11**) to facilitate agent communication.
+### 🚀 Installation Process:
+
+1. **GPG Key Integration:** First, I added the official Wazuh GPG key to the system to verify the authenticity of the software packages.
+
+2. **Automated Installation Script:**
+I executed the following all-in-one installation script. This single command automates the deployment of the Wazuh Indexer, Server, and Dashboard:
+`curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh && sudo bash ./wazuh-install.sh -a -i`
+
+3. **Post-Installation Validation:**
+After the process was completed, I identified the Manager's IP as **172.20.10.11**, which was essential for registering the Windows agent in the next phase.
 
 
 <img width="1919" height="1002" alt="Screenshot 2026-03-25 124924" src="https://github.com/user-attachments/assets/f5dc8371-c73d-47bf-81ab-c30dc9c8f40c" />
